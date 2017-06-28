@@ -1,0 +1,33 @@
+<!-- BEGIN combined_search -->
+<style>
+    .CombinedSearchForm{
+        padding-bottom: 6px;
+    }
+
+
+</style>
+<script type="text/javascript" src="./Customizing/global/plugins/Services/UIComponent/UserInterfaceHook/CombinedSearch/templates/jquery.livesearch.js"></script>
+<script type="text/javascript" src="./Customizing/global/plugins/Services/UIComponent/UserInterfaceHook/CombinedSearch/templates/quicksilver.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		var $combinedSearch = $('#combinedsearch');
+		$combinedSearch.liveUpdate('{LIST}', '.ilCLI').focus();
+		$combinedSearch.bind("keypress", function(event) {
+		    if(event.which == 13) {
+		        	$('#combinedsearchform').submit();
+		        	return false;
+		        }
+		    });
+	});
+</script>
+<form id="combinedsearchform" action="{FORMACTION}" method="post" target="_top">
+	<div class="CombinedSearchForm">
+	        <div class="input-group">
+	            <input type="text" class="form-control" placeholder="{ENTER_SEARCHSTRING} ..." value="" name="queryString" id="combinedsearch" />
+	            <span class="input-group-btn">
+	                <button id="searchInTree" class="btn btn-default" type="submit">{SEARCH_IN_TREE}</button>
+	            </span>
+	        </div>
+	</div>
+</form>
+<!-- END combined_search -->

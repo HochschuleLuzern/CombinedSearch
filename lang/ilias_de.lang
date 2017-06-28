@@ -1,0 +1,12 @@
+//
+// Copyright (c) 2014 Universitaet Bern
+//
+
+<!-- language file start -->
+title#:#Inhalts-Filter
+enter_searchstring#:#Suchtext eingeben
+search_in_tree#:#ILIAS durchsuchen
+show_on_desktop#:#Suche auf Schreibtisch anzeigen
+show_centered_on_desktop#:#Im Schreibtisch zentral anzeigen
+show_in_repository#:#Suche in Magazin (Kategorien, Kursen & Gruppen) anzeigen
+configuration#:#Konfiguration

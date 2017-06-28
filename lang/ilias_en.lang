@@ -1,0 +1,12 @@
+//
+// Copyright (c) 2014 Universitaet Bern
+//
+
+<!-- language file start -->
+title#:#Content-Filter
+enter_searchstring#:#Enter Searchstring
+search_in_tree#:#Search in ILIAS
+show_on_desktop#:#Show search on desktop
+show_centered_on_desktop#:#Show centered on desktop
+show_in_repository#:#Show search in repository
+configuration#:#Configuration
