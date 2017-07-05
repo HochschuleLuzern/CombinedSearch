@@ -51,9 +51,8 @@ class ilCombinedSearchBlockGUI extends ilBlockGUI {
 		{
 			$search->setVariable('FORMACTION','ilias.php?baseClass=ilSearchController&cmd=post'.
 					'&rtoken='.$DIC['ilCtrl']->getRequestToken().'&fallbackCmd=remoteSearch');
-		} else {
-			//Need to deactivate global search
 		}
+		
 		$search->setVariable('ENTER_SEARCHSTRING', $this->plugin->txt('enter_searchstring'));
 		$search->setVariable('LIST', $this->getContainerSelector());
 		$search->setVariable('SEARCH_IN_TREE', $this->plugin->txt('search_in_tree'));

@@ -9,7 +9,7 @@
 		this.field = $(e);
 		this.line = line;
 		this.list = $(list);
-		this.top_element = undefined;
+		this.is_active = undefined;
 
 		if (this.list.length > 0) {
 			this.init();
@@ -31,18 +31,12 @@
 		},
 
 		filter:function (e) {
-			// open the top element when pressing enter (key code 13)
+			// start search on full tree when pressing enter (key code 13)
 			if (e !== undefined) {
 				var code = e.keyCode || e.which;
 				if (code  == 13) {
-					if (this.top_element !== undefined) {
-						var url = this.top_element.find('h4.il_ContainerItemTitle > a');
-						if (jQuery.type(url.attr('href')) === 'string') {
-							window.location.href = url.attr('href');
-						}
-					}
-					e.preventDefault();
-					return;
+					$('#combinedsearchform').submit();
+		        	return false;
 				}
 			}
 
@@ -51,11 +45,20 @@
                 this.list.find(this.line).parent().show();
 				this.list.find(this.line + ' .subitem').show();
 				this.list.find('.ilPDBlockSubHeader').show();
-				this.field.parent().find('#SearchInTree').attr('disabled','disabled');
-				this.top_element = this.rows[0];
+				this.field.parent().find('#searchInTree').attr('disabled','disabled');
 				this.field.focus();
 			} else {
-				this.field.parent().find('#SearchInTree').removeAttr('disabled');
+				if (this.is_active) {
+					this.field.parent().find('#searchInTree').removeAttr('disabled');
+				} else if (this.is_active == undefined) {
+					if ($('#combinedsearchform').attr('action') != '') {
+						this.is_active = true;
+						this.field.parent().find('#searchInTree').removeAttr('disabled');
+					} else {	
+						this.is_active = false;
+					}
+				}
+				
 				this.displayResults(this.getScores(this.field.val().toLowerCase()));
 			}
 		},
@@ -106,13 +109,6 @@
 				}
 
             });
-
-			// Update the element that should be opened when pressing enter
-			if (scores.length > 0) {
-				this.top_element = self.rows[scores[0].index];
-			} else {
-				this.top_element = undefined;
-			}
 		},
 
 		getScores:function (term) {

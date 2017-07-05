@@ -3,7 +3,7 @@
 //
 
 <!-- language file start -->
-title#:#Content-Filter
+title#:#Search
 enter_searchstring#:#Enter Searchstring
 search_in_tree#:#Search in ILIAS
 show_on_desktop#:#Show search on desktop
