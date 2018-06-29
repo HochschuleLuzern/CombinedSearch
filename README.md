@@ -8,7 +8,7 @@ It is based on the Container Filter Plugin developed by the iLUB at the Universi
 5.2.0
 
 **Maximum ILIAS Version:**
-5.2.999
+5.3.999
 
 **Responsible Developer:**
 Stephan Winiker - stephan.winiker@hslu.ch
