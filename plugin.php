@@ -48,8 +48,7 @@ $ilias_min_version = "5.2.0";
  *
  * @var string $ilias_min_version
  */ 
-$ilias_max_version = "5.3.999";
-
+$ilias_max_version = "5.4.999";
 
 /*
  * Further optional, but often useful information
