@@ -40,7 +40,7 @@ $version = "1.0";
  * 
  * @var string $ilias_min_version
  */ 
-$ilias_min_version = "5.2.0";
+$ilias_min_version = "6.0";
 /**
  * ILIAS max version; must always reflect the versions of ILIAS this plugin is combatible with
  * 
@@ -48,7 +48,7 @@ $ilias_min_version = "5.2.0";
  *
  * @var string $ilias_min_version
  */ 
-$ilias_max_version = "5.4.999";
+$ilias_max_version = "6.999";
 
 /*
  * Further optional, but often useful information
