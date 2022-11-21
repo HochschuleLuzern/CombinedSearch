@@ -32,7 +32,8 @@ class ilCombinedSearchUIHookGUI extends ilUIHookPluginGUI {
 				$place = 'right_column';
 			}
 			
-			if ($a_comp == 'Services/PersonalDesktop' && $a_part == $place) {
+			//if ($a_comp == 'Services/PersonalDesktop' && $a_part == $place) {
+            if ($a_comp == 'Services/Dashboard' && $a_part == $place) {
 				return array('mode' => ilUIHookPluginGUI::PREPEND,
 						'html' => $this->getBlockHTML(self::PERSONAL_DESKTOP_SELECTOR));
 			}

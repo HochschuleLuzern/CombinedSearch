@@ -8,12 +8,13 @@
 		display: none;
 	} 
 </style>
-<script type="text/javascript" src="./Customizing/global/plugins/Services/UIComponent/UserInterfaceHook/CombinedSearch/templates/jquery.livesearch.js"></script>
+<script type="text/javascript" src="./Customizing/global/plugins/Services/UIComponent/UserInterfaceHook/CombinedSearch/templates/livesearch.js"></script>
 <script type="text/javascript" src="./Customizing/global/plugins/Services/UIComponent/UserInterfaceHook/CombinedSearch/templates/quicksilver.js"></script>
 <script type="text/javascript" charset="utf-8">
-	$(document).ready(function() {
-		var $combinedSearch = $('#combinedsearch');
-		$combinedSearch.liveUpdate('{LIST}', '.ilCLI').focus();
+	document.addEventListener("DOMContentLoaded", function(event) {
+		var combinedSearch = document.getElementById('combinedsearch');
+		Livesearch.addLiveUpdate(combinedSearch, '{LIST}', '.il-std-item-container');
+		combinedSearch.focus();
 	});
 </script>
 <form id="combinedsearchform" action="{FORMACTION}" method="post" target="_top">

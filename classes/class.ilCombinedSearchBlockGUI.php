@@ -46,7 +46,7 @@ class ilCombinedSearchBlockGUI extends ilBlockGUI {
 	public function fillDataSection() {
 		global $DIC;
 		include_once 'Services/Search/classes/class.ilSearchSettings.php';
-		$search = $this->plugin->getTemplate('tpl.jquerysearch.html', true, true);
+		$search = $this->plugin->getTemplate('tpl.search.html', true, true);
 		if($DIC['rbacsystem']->checkAccess('search',ilSearchSettings::_getSearchSettingRefId()))
 		{
 			$search->setVariable('FORMACTION','ilias.php?baseClass=ilSearchController&cmd=post'.
